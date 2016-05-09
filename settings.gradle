@@ -1,2 +1,3 @@
 include ':app', ':ListView_imooc'
 include ':UI_Template'
+include ':ObjectAnimator'
