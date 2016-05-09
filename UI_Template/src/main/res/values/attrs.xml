@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <!-- 文字 -->
+        <attr name="TB_leftText" format="string" />
+        <attr name="TB_rightText" format="string" />
+        <attr name="TB_titleText" format="string" />
+        <!-- 文字颜色 -->
+        <attr name="TB_leftTextColor" format="color" />
+        <attr name="TB_rightTextColor" format="color" />
+        <attr name="TB_titleTextColor" format="color" />
+        <!-- 文字大小 -->
+        <attr name="TB_titleTextSize" format="dimension" />
+        <!-- 背景色 -->
+        <attr name="TB_leftBackground" format="reference|color" />
+        <attr name="TB_rightBackground" format="reference|color" />
+
+    </declare-styleable>
+
+</resources>
