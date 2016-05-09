@@ -1,12 +1,12 @@
 package com.huawaii.objectanimator;
 
-import android.os.Bundle;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     }
 
 
-    public void translate(View v){
+    public void translate(View v) {
 //        TranslateAnimation ta = new TranslateAnimation(0, 150, 0, 0);
 //        ta.setDuration(2000);
 //        ta.setFillAfter(true);
@@ -47,19 +47,19 @@ public class MainActivity extends Activity {
         oa.start();
     }
 
-    public void scale(View v){
+    public void scale(View v) {
         ObjectAnimator oa = ObjectAnimator.ofFloat(iv, "scaleX", 1, 1.6f, 1.2f, 2);
         oa.setDuration(2000);
         oa.start();
     }
 
-    public void alpha(View v){
+    public void alpha(View v) {
         ObjectAnimator oa = ObjectAnimator.ofFloat(iv, "alpha", 0, 0.6f, 0.2f, 1);
         oa.setDuration(2000);
         oa.start();
     }
 
-    public void rotate(View v){
+    public void rotate(View v) {
         ObjectAnimator oa = ObjectAnimator.ofFloat(iv, "rotationY", 0, 180, 90, 360);
         oa.setDuration(2000);
         oa.setRepeatCount(1);
@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
         oa.start();
     }
 
-    public void fly(View v){
+    public void fly(View v) {
         AnimatorSet set = new AnimatorSet();
 
         ObjectAnimator oa1 = ObjectAnimator.ofFloat(iv, "translationX", 10, 70, 20, 100);
@@ -97,7 +97,7 @@ public class MainActivity extends Activity {
         set.start();
     }
 
-    public void xml(View v){
+    public void xml(View v) {
         Animator at = AnimatorInflater.loadAnimator(this, R.animator.objanimator);
         //设置作用于哪个组件
         at.setTarget(iv);
