@@ -9,19 +9,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ListView_imooc" />
-            <option value="$PROJECT_DIR$/ObjectAnimator" />
-            <option value="$PROJECT_DIR$/UI_Template" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app_ListView" />
+            <option value="$PROJECT_DIR$/app_RecyclerView" />
+            <option value="$PROJECT_DIR$/app_UI_Template" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ListView_imooc" />
-            <option value="$PROJECT_DIR$/ObjectAnimator" />
-            <option value="$PROJECT_DIR$/UI_Template" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app_ListView" />
+            <option value="$PROJECT_DIR$/app_RecyclerView" />
+            <option value="$PROJECT_DIR$/app_UI_Template" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,3 +1,2 @@
-include ':app', ':ListView_imooc'
-include ':UI_Template'
-include ':ObjectAnimator'
+include ':app', ':app_ListView', ':app_RecyclerView'
+include ':app_UI_Template'
