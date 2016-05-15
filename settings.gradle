@@ -1,2 +1,2 @@
-include ':app', ':app_ListView', ':app_RecyclerView'
+include ':app', ':app_ListView', ':app_RecyclerView', ':app_WebView'
 include ':app_UI_Template'

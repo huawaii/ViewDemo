@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/app_ListView/app_ListView.iml" filepath="$PROJECT_DIR$/app_ListView/app_ListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_RecyclerView/app_RecyclerView.iml" filepath="$PROJECT_DIR$/app_RecyclerView/app_RecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_UI_Template/app_UI_Template.iml" filepath="$PROJECT_DIR$/app_UI_Template/app_UI_Template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app_WebView/app_WebView.iml" filepath="$PROJECT_DIR$/app_WebView/app_WebView.iml" />
     </modules>
   </component>
 </project>

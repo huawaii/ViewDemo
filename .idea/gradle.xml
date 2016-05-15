@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app_ListView" />
             <option value="$PROJECT_DIR$/app_RecyclerView" />
             <option value="$PROJECT_DIR$/app_UI_Template" />
+            <option value="$PROJECT_DIR$/app_WebView" />
           </set>
         </option>
         <option name="myModules">
@@ -22,6 +23,7 @@
             <option value="$PROJECT_DIR$/app_ListView" />
             <option value="$PROJECT_DIR$/app_RecyclerView" />
             <option value="$PROJECT_DIR$/app_UI_Template" />
+            <option value="$PROJECT_DIR$/app_WebView" />
           </set>
         </option>
       </GradleProjectSettings>
