@@ -40,10 +40,14 @@ public class MainActivity extends Activity {
     }
 
     private void initListener() {
-        viewPager.setOnPageChangeListener(new OnPageChangeListener() {
+        viewPager.addOnPageChangeListener(new OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 Log.e("Activity", "position: " + position);
+                if(position == 0)
+                    viewPager.setCurrentItem(position + 1);
+                else if(position == (list.size() -1))
+                    viewPager.setCurrentItem(position - 1);
                 updateIntroAndDot();
             }
 
@@ -58,11 +62,11 @@ public class MainActivity extends Activity {
     }
 
     private void initData() {
-        list.add(new com.huawaii.viewpager.Ad(R.drawable.a, "巩俐不低俗，我就不能低俗"));
-        list.add(new com.huawaii.viewpager.Ad(R.drawable.b, "朴树又回来了，再唱经典老歌引百万人同唱啊"));
-        list.add(new com.huawaii.viewpager.Ad(R.drawable.c, "揭秘北京电影如何升级"));
-        list.add(new com.huawaii.viewpager.Ad(R.drawable.d, "乐视网TV版大放送"));
-        list.add(new com.huawaii.viewpager.Ad(R.drawable.e, "热血屌丝的反杀"));
+        list.add(new com.huawaii.viewpager.Ad(R.drawable.a, "111"));
+        list.add(new com.huawaii.viewpager.Ad(R.drawable.b, "222"));
+        list.add(new com.huawaii.viewpager.Ad(R.drawable.c, "333"));
+        list.add(new com.huawaii.viewpager.Ad(R.drawable.d, "444"));
+        list.add(new com.huawaii.viewpager.Ad(R.drawable.e, "555"));
 
         initDots();
 
