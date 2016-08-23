@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -11,15 +12,28 @@ public class MyViewGroupB extends RelativeLayout {
 
     public MyViewGroupB(Context context) {
         super(context);
+        init();
     }
 
     public MyViewGroupB(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public MyViewGroupB(Context context, AttributeSet attrs,
                         int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private void init() {
+        setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.d("lzh", "ViewGroupB onTouch" + event.getAction());
+                return false;
+            }
+        });
     }
 
     @Override

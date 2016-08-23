@@ -10,17 +10,29 @@ public class MyView extends View {
 
     public MyView(Context context) {
         super(context);
+        init();
     }
 
     public MyView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public MyView(Context context, AttributeSet attrs,
                   int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
+    private void init() {
+        setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.d("lzh", "View onTouch" + event.getAction());
+                return false;
+            }
+        });
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d("lzh", "View onTouchEvent" + event.getAction());
