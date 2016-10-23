@@ -16,15 +16,15 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        //Log.d("lzh", "dispatchTouchEvent->19: ---------------start");
-        //Log.d("lzh", "MainActivity dispatchTouchEvent" + ev.getAction());
+        //Log.d("click", "dispatchTouchEvent->19: ---------------start");
+        //Log.d("click", "MainActivity dispatchTouchEvent" + ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //Log.d("lzh", "onTouchEvent->26: ---------------end");
-        //Log.d("lzh", "MainActivity onTouchEvent" + event.getAction());
+        //Log.d("click", "onTouchEvent->26: ---------------end");
+        //Log.d("click", "MainActivity onTouchEvent" + event.getAction());
         return super.onTouchEvent(event);
     }
 }
