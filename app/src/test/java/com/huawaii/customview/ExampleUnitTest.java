@@ -1,4 +1,4 @@
-package com.huawaii.viewdemo;
+package com.huawaii.customview;
 
 import org.junit.Test;
 

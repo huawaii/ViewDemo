@@ -1,4 +1,4 @@
-package com.huawaii.viewdemo;
+package com.huawaii.customview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
