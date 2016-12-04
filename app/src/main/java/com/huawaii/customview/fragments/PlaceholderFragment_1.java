@@ -1,4 +1,4 @@
-package com.huawaii.customview;
+package com.huawaii.customview.fragments;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.huawaii.customview.R;
 
 
 /**
@@ -46,10 +48,10 @@ public class PlaceholderFragment_1 extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main_1, container, false);
         //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
         //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-        ImageView imageView1 = (ImageView) rootView.findViewById(R.id.mz_big_picture);
+        ImageView imageView1 = (ImageView) rootView.findViewById(R.id.big_picture);
         imageView1.setImageBitmap(BitmapFactory.decodeResource(rootView.getResources(), R.mipmap.panda1));
 
-        ImageView imageView2 = (ImageView) rootView.findViewById(R.id.big_picture);
+        ImageView imageView2 = (ImageView) rootView.findViewById(R.id.mz_big_picture);
         imageView2.setImageBitmap(BitmapFactory.decodeResource(rootView.getResources(), R.mipmap.panda1));
 
         return rootView;

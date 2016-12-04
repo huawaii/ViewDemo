@@ -1,4 +1,4 @@
-package com.huawaii.customview;
+package com.huawaii.customview.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;

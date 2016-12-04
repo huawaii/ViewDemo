@@ -1,10 +1,12 @@
-package com.huawaii.customview;
+package com.huawaii.customview.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.huawaii.customview.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,22 +18,22 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class PlaceholderFragment_3 extends Fragment {
+public class PlaceholderFragment_2 extends Fragment {
     /**
      * The fragment argument representing the section number for this
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    public PlaceholderFragment_3() {
+    public PlaceholderFragment_2() {
     }
 
     /**
      * Returns a new instance of this fragment for the given section
      * number.
      */
-    public static PlaceholderFragment_3 newInstance(int sectionNumber) {
-        PlaceholderFragment_3 fragment = new PlaceholderFragment_3();
+    public static PlaceholderFragment_2 newInstance(int sectionNumber) {
+        PlaceholderFragment_2 fragment = new PlaceholderFragment_2();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
@@ -41,7 +43,7 @@ public class PlaceholderFragment_3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main_3, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_main_2, container, false);
         //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
         //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
         return rootView;

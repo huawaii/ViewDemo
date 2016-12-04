@@ -10,12 +10,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
+import com.huawaii.customview.fragments.PlaceholderFragment_1;
+import com.huawaii.customview.fragments.PlaceholderFragment_2;
+import com.huawaii.customview.fragments.PlaceholderFragment_3;
 import com.meizu.common.renderer.drawable.GLBlurWindowDrawable;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,15 +65,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK) { //监控/拦截/屏蔽返回键
-            Toast.makeText(this, "若退出，请按Home键！", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
     @Override

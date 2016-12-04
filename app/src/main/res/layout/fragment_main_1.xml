@@ -7,16 +7,7 @@
               android:paddingLeft="@dimen/activity_horizontal_margin"
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context="com.huawaii.customview.PlaceholderFragment_1">
-
-    <com.huawaii.customview.RoundImageView
-        android:id="@+id/mz_big_picture"
-        android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="14dp"
-        android:scaleType="centerCrop"/>
+              tools:context="com.huawaii.customview.fragments.PlaceholderFragment_1">
 
     <ImageView
         android:id="@+id/big_picture"
@@ -26,5 +17,26 @@
         android:layout_marginStart="13dp"
         android:layout_marginEnd="14dp"
         android:scaleType="centerCrop"/>
+
+    <com.huawaii.customview.views.RoundImageView
+        android:id="@+id/mz_big_picture"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="14dp"
+        android:scaleType="centerCrop"/>
+
+    <com.huawaii.customview.views.CustomView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <com.huawaii.customview.views.CustomViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </com.huawaii.customview.views.CustomViewGroup>
 
 </LinearLayout>
