@@ -35,40 +35,51 @@ public class MyViewB extends View implements View.OnClickListener{
             }
         });*/
     }
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        Log.d("click", "ViewB onTouchEvent" + event.getAction());
-        return super.onTouchEvent(event);
-    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Log.d("click", "ViewB dispatchTouchEvent" + event.getAction());
+        if (Debug.DEBUG_EVENT) {
+            Log.d("click", "ViewB dispatchTouchEvent: " + event.getAction());
+        }
         return super.dispatchTouchEvent(event);
     }
 
     @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (Debug.DEBUG_EVENT) {
+            Log.d("click", "ViewB onTouchEvent: " + event.getAction());
+        }
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (Debug.DEBUG_EVENT) {
+            Log.d("Refresh", "ViewB onClick->69: ");
+        }
+    }
+
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        Log.d("Refresh", "onMeasure->51: ViewB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewB onMeasure->51: ");
+        }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        Log.d("Refresh", "onLayout->57: ViewB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewB onLayout->57: ");
+        }
         super.onLayout(changed, left, top, right, bottom);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Log.d("Refresh", "onDraw->63: ViewB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewB onDraw->63: ");
+        }
         super.onDraw(canvas);
-    }
-
-    @Override
-    public void onClick(View v) {
-        Log.d("Refresh", "onClick->69: ViewB");
-        //requestLayout();
-        //invalidate();
     }
 }

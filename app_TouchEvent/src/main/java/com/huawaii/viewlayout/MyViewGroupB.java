@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class MyViewGroupB extends RelativeLayout implements View.OnClickListener{
@@ -40,44 +39,56 @@ public class MyViewGroupB extends RelativeLayout implements View.OnClickListener
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d("click", "ViewGroupB dispatchTouchEvent" + ev.getAction());
+        if (Debug.DEBUG_EVENT) {
+            Log.d("click", "ViewGroupB dispatchTouchEvent: " + ev.getAction());
+        }
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d("click", "ViewGroupB onInterceptTouchEvent" + ev.getAction());
+        if (Debug.DEBUG_EVENT) {
+            Log.d("click", "ViewGroupB onInterceptTouchEvent: " + ev.getAction());
+        }
         return super.onInterceptTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d("click", "ViewGroupB onTouchEvent" + event.getAction());
+        if (Debug.DEBUG_EVENT) {
+            Log.d("click", "ViewGroupB onTouchEvent: " + event.getAction());
+        }
         return super.onTouchEvent(event);
     }
 
     @Override
+    public void onClick(View v) {
+        if (Debug.DEBUG_EVENT) {
+            Log.d("Refresh", "ViewGroupB onClick->78: ");
+        }
+    }
+
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        Log.d("Refresh", "onMeasure->60: ViewGroupB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewGroupB onMeasure->60: ");
+        }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        Log.d("Refresh", "onLayout->66: ViewGroupB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewGroupB onLayout->66: ");
+        }
         super.onLayout(changed, l, t, r, b);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Log.d("Refresh", "onDraw->72: ViewGroupB");
+        if (Debug.DEBUG_LAYOUT) {
+            Log.d("Refresh", "ViewGroupB onDraw->72: ");
+        }
         super.onDraw(canvas);
-    }
-
-    @Override
-    public void onClick(View v) {
-        Log.d("Refresh", "onClick->78: ViewGroupB");
-        //requestLayout();
-        //invalidate();
     }
 }
