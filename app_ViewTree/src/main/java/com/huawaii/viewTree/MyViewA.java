@@ -82,4 +82,10 @@ public class MyViewA extends View implements View.OnClickListener{
         Log.d(DEBUG_LAYOUT, "ViewA dispatchDraw.79-> ");
         super.dispatchDraw(canvas);
     }
+
+    @Override
+    public void draw(Canvas canvas) {
+        Log.d(DEBUG_LAYOUT, "ViewA draw.88-> ");
+        super.draw(canvas);
+    }
 }

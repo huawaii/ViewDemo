@@ -63,7 +63,7 @@ public class MyViewGroupA extends RelativeLayout implements View.OnClickListener
         Log.d(DEBUG_EVENT, "ViewGroupA onClick->79: -------");
         Log.d(DEBUG_LAYOUT, "ViewGroupA onClick->79: -------");
         //requestLayout();
-        //invalidate();
+        invalidate();
     }
 
     @Override
@@ -88,5 +88,17 @@ public class MyViewGroupA extends RelativeLayout implements View.OnClickListener
     protected void dispatchDraw(Canvas canvas) {
         Log.d(DEBUG_LAYOUT, "ViewGroupA dispatchDraw: ");
         super.dispatchDraw(canvas);
+    }
+
+    @Override
+    protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
+        Log.d(DEBUG_LAYOUT, "ViewGroupA drawChild.95-> ");
+        return super.drawChild(canvas, child, drawingTime);
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        Log.d(DEBUG_LAYOUT, "ViewGroupA draw.101-> ");
+        super.draw(canvas);
     }
 }
