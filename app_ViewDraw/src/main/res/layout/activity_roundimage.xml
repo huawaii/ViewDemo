@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+* Copyright (C) 2017 huawaii. All rights reserved.
+* @author huawaii on .
+*/
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/big_picture"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="14dp"
+        android:scaleType="centerCrop"/>
+
+    <com.huawaii.viewDraw.views.RoundImageView
+        android:id="@+id/mz_big_picture"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="14dp"
+        android:scaleType="centerCrop"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+* Copyright (C) 2017 huawaii. All rights reserved.
+* @author huawaii on .
+*/
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.huawaii.viewDraw.views.PorterDuffXfermodeView
+        android:id="@+id/xfermode_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="14dp"
+        android:layerType="hardware"/>
+</LinearLayout>
