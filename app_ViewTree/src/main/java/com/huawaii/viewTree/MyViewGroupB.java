@@ -60,7 +60,10 @@ public class MyViewGroupB extends RelativeLayout implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        Log.d(DEBUG_EVENT, "ViewGroupB onClick->78: ");
+        Log.d(DEBUG_EVENT, "ViewGroupB onClick->78: -------");
+        Log.d(DEBUG_LAYOUT, "ViewGroupB onClick->78: -------");
+        //requestLayout();
+        //invalidate();
     }
 
     @Override

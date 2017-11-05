@@ -21,27 +21,29 @@
                 android:id="@+id/MyViewA"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:background="@android:color/darker_gray">
+                android:background="@android:color/holo_red_light">
             </com.huawaii.viewTree.MyViewA>
             <com.huawaii.viewTree.MyViewB
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@id/MyViewA"
-                android:background="@android:color/darker_gray">
+                android:background="@android:color/holo_orange_light">
             </com.huawaii.viewTree.MyViewB>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/holo_green_light"
-                android:text="MyViewGroupB"/>
+                android:visibility="gone"
+                android:text="TextViewB"/>
         </com.huawaii.viewTree.MyViewGroupB>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@android:color/holo_blue_light"
-            android:text="MyViewGroupA"/>
+            android:visibility="gone"
+            android:text="TextViewA"/>
     </com.huawaii.viewTree.MyViewGroupA>
 </RelativeLayout>

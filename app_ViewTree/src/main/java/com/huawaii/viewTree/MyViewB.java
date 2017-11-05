@@ -53,7 +53,10 @@ public class MyViewB extends View implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Log.d(DEBUG_EVENT, "ViewB onClick->69: ");
+        Log.d(DEBUG_EVENT, "ViewB onClick->69: -------");
+        Log.d(DEBUG_LAYOUT, "ViewB onClick->69: -------");
+        //requestLayout();
+        //invalidate();
     }
 
     @Override
