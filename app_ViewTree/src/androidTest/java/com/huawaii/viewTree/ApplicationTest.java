@@ -1,4 +1,4 @@
-package com.huawaii.viewlayout;
+package com.huawaii.viewTree;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.huawaii.viewlayout;
+package com.huawaii.viewTree;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.view.MotionEvent;
 
 public class MainActivity extends Activity {
 
+    public final static String DEBUG_EVENT = "Click";
+    public final static String DEBUG_LAYOUT = "Refresh";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,17 +19,13 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (Debug.DEBUG_EVENT) {
-            //Log.d("click", "---------------start MainActivity dispatchTouchEvent: " + ev.getAction());
-        }
+        Log.d(DEBUG_EVENT, "---------------start MainActivity dispatchTouchEvent: " + ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (Debug.DEBUG_EVENT) {
-            //Log.d("click", "---------------end MainActivity onTouchEvent: " + event.getAction());
-        }
+        Log.d(DEBUG_EVENT, "---------------end MainActivity onTouchEvent: " + event.getAction());
         return super.onTouchEvent(event);
     }
 }

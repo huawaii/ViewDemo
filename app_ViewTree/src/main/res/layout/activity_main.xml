@@ -8,40 +8,40 @@
                 android:paddingTop="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
-    <com.huawaii.viewlayout.MyViewGroupA
+    <com.huawaii.viewTree.MyViewGroupA
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_dark">
-        <com.huawaii.viewlayout.MyViewGroupB
+        <com.huawaii.viewTree.MyViewGroupB
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:background="@android:color/holo_green_dark">
 
-            <com.huawaii.viewlayout.MyViewA
+            <com.huawaii.viewTree.MyViewA
                 android:id="@+id/MyViewA"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:background="@android:color/darker_gray">
-            </com.huawaii.viewlayout.MyViewA>
-            <com.huawaii.viewlayout.MyViewB
+            </com.huawaii.viewTree.MyViewA>
+            <com.huawaii.viewTree.MyViewB
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@id/MyViewA"
                 android:background="@android:color/darker_gray">
-            </com.huawaii.viewlayout.MyViewB>
+            </com.huawaii.viewTree.MyViewB>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/holo_green_light"
                 android:text="MyViewGroupB"/>
-        </com.huawaii.viewlayout.MyViewGroupB>
+        </com.huawaii.viewTree.MyViewGroupB>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@android:color/holo_blue_light"
             android:text="MyViewGroupA"/>
-    </com.huawaii.viewlayout.MyViewGroupA>
+    </com.huawaii.viewTree.MyViewGroupA>
 </RelativeLayout>

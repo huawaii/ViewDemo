@@ -1,4 +1,4 @@
-package com.huawaii.viewlayout;
+package com.huawaii.viewTree;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import static com.huawaii.viewTree.MainActivity.DEBUG_EVENT;
+import static com.huawaii.viewTree.MainActivity.DEBUG_LAYOUT;
 
 public class MyViewGroupB extends RelativeLayout implements View.OnClickListener{
 
@@ -39,56 +42,48 @@ public class MyViewGroupB extends RelativeLayout implements View.OnClickListener
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (Debug.DEBUG_EVENT) {
-            Log.d("click", "ViewGroupB dispatchTouchEvent: " + ev.getAction());
-        }
+        Log.d(DEBUG_EVENT, "ViewGroupB dispatchTouchEvent: " + ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (Debug.DEBUG_EVENT) {
-            Log.d("click", "ViewGroupB onInterceptTouchEvent: " + ev.getAction());
-        }
+        Log.d(DEBUG_EVENT, "ViewGroupB onInterceptTouchEvent: " + ev.getAction());
         return super.onInterceptTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (Debug.DEBUG_EVENT) {
-            Log.d("click", "ViewGroupB onTouchEvent: " + event.getAction());
-        }
+        Log.d(DEBUG_EVENT, "ViewGroupB onTouchEvent: " + event.getAction());
         return super.onTouchEvent(event);
     }
 
     @Override
     public void onClick(View v) {
-        if (Debug.DEBUG_EVENT) {
-            Log.d("Refresh", "ViewGroupB onClick->78: ");
-        }
+        Log.d(DEBUG_EVENT, "ViewGroupB onClick->78: ");
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        if (Debug.DEBUG_LAYOUT) {
-            Log.d("Refresh", "ViewGroupB onMeasure->60: ");
-        }
+        Log.d(DEBUG_LAYOUT, "ViewGroupB onMeasure->60: ");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        if (Debug.DEBUG_LAYOUT) {
-            Log.d("Refresh", "ViewGroupB onLayout->66: ");
-        }
+        Log.d(DEBUG_LAYOUT, "ViewGroupB onLayout->66: ");
         super.onLayout(changed, l, t, r, b);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (Debug.DEBUG_LAYOUT) {
-            Log.d("Refresh", "ViewGroupB onDraw->72: ");
-        }
+        Log.d(DEBUG_LAYOUT, "ViewGroupB onDraw->72: ");
         super.onDraw(canvas);
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        Log.d(DEBUG_LAYOUT, "ViewGroupB dispatchDraw: ");
+        super.dispatchDraw(canvas);
     }
 }
