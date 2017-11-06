@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".RoundImageActivity"/>
         <activity android:name=".XfermodeActivity"/>
+        <activity android:name=".CanvasActivity"/>
     </application>
 
 </manifest>

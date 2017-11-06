@@ -10,11 +10,15 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.shapes.RoundRectShape;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
 /**
  * Created by lzh on 16-12-2.
+ *
+ * http://www.jianshu.com/p/818e1284158d
+ * https://github.com/GcsSloop/rclayout
  */
 
 public class RoundImageView extends ImageView {
