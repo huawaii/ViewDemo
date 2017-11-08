@@ -3,6 +3,7 @@ package com.huawaii.viewDraw;
 import android.app.Activity;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 /**
@@ -18,10 +19,22 @@ public class RoundImageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roundimage);
 
+        //testBitmapShader();
+        testXfermode();
+    }
+
+    private void testBitmapShader() {
         ImageView imageView1 = (ImageView) findViewById(R.id.big_picture);
+        imageView1.setVisibility(View.VISIBLE);
         imageView1.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.mipmap.panda1));
 
         ImageView imageView2 = (ImageView) findViewById(R.id.mz_big_picture);
+        imageView1.setVisibility(View.VISIBLE);
         imageView2.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.mipmap.panda1));
+    }
+
+    private void testXfermode() {
+        View view = findViewById(R.id.test_RCRelativeLayout);
+        view.setVisibility(View.VISIBLE);
     }
 }

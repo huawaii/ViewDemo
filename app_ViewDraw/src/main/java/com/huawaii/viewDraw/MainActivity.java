@@ -13,7 +13,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gotoCanvasActivity(null);
+        gotoRoundImageActivity(null);
+        //gotoCanvasActivity(null);
     }
 
     public void gotoRoundImageActivity(View view) {

@@ -6,6 +6,7 @@
 */
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -16,7 +17,8 @@
         android:layout_marginTop="11dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="14dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
 
     <com.huawaii.viewDraw.views.RoundImageView
         android:id="@+id/mz_big_picture"
@@ -25,5 +27,114 @@
         android:layout_marginTop="11dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="14dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/test_RCRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <com.huawaii.viewDraw.views.RCRelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:round_corner="30dp"
+            app:round_corner_top_left="0dp"
+            app:stroke_color="#E39E83"
+            app:stroke_width="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/panda1"/>
+
+        </com.huawaii.viewDraw.views.RCRelativeLayout>
+
+        <com.huawaii.viewDraw.views.RCRelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            app:round_corner="30dp"
+            app:round_corner_top_right="0dp"
+            app:stroke_color="#E39E83"
+            app:stroke_width="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/panda1"/>
+
+        </com.huawaii.viewDraw.views.RCRelativeLayout>
+
+        <com.huawaii.viewDraw.views.RCRelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            app:round_corner="30dp"
+            app:round_corner_bottom_left="0dp"
+            app:stroke_color="#E39E83"
+            app:stroke_width="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/panda1"/>
+
+        </com.huawaii.viewDraw.views.RCRelativeLayout>
+
+        <com.huawaii.viewDraw.views.RCRelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:round_corner="30dp"
+            app:round_corner_bottom_right="0dp"
+            app:stroke_color="#E39E83"
+            app:stroke_width="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/panda1"/>
+
+        </com.huawaii.viewDraw.views.RCRelativeLayout>
+
+        <com.huawaii.viewDraw.views.RCRelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            app:round_as_circle="true"
+            app:round_corner="30dp"
+            app:round_corner_bottom_right="0dp"
+            app:stroke_color="#E39E83"
+            app:stroke_width="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/panda1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_alignParentBottom="true"
+                android:background="#995F5652"
+                android:gravity="center_horizontal"
+                android:text="害怕.png"
+                android:textColor="#fff"
+                android:textSize="24sp"/>
+
+        </com.huawaii.viewDraw.views.RCRelativeLayout>
+    </RelativeLayout>
+
 </LinearLayout>
