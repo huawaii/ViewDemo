@@ -20,7 +20,7 @@
         android:scaleType="centerCrop"
         android:visibility="gone"/>
 
-    <com.huawaii.viewDraw.views.RoundImageView
+    <com.huawaii.viewDraw.RoundRect.RoundImageView
         android:id="@+id/mz_big_picture"
         android:layout_width="match_parent"
         android:layout_height="95dp"
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone">
-        <com.huawaii.viewDraw.views.RCRelativeLayout
+        <com.huawaii.viewDraw.RoundRect.RCRelativeLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
@@ -51,9 +51,9 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/panda1"/>
 
-        </com.huawaii.viewDraw.views.RCRelativeLayout>
+        </com.huawaii.viewDraw.RoundRect.RCRelativeLayout>
 
-        <com.huawaii.viewDraw.views.RCRelativeLayout
+        <com.huawaii.viewDraw.RoundRect.RCRelativeLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentRight="true"
@@ -69,9 +69,9 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/panda1"/>
 
-        </com.huawaii.viewDraw.views.RCRelativeLayout>
+        </com.huawaii.viewDraw.RoundRect.RCRelativeLayout>
 
-        <com.huawaii.viewDraw.views.RCRelativeLayout
+        <com.huawaii.viewDraw.RoundRect.RCRelativeLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
@@ -87,9 +87,9 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/panda1"/>
 
-        </com.huawaii.viewDraw.views.RCRelativeLayout>
+        </com.huawaii.viewDraw.RoundRect.RCRelativeLayout>
 
-        <com.huawaii.viewDraw.views.RCRelativeLayout
+        <com.huawaii.viewDraw.RoundRect.RCRelativeLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
@@ -105,9 +105,9 @@
                 android:scaleType="centerCrop"
                 android:src="@mipmap/panda1"/>
 
-        </com.huawaii.viewDraw.views.RCRelativeLayout>
+        </com.huawaii.viewDraw.RoundRect.RCRelativeLayout>
 
-        <com.huawaii.viewDraw.views.RCRelativeLayout
+        <com.huawaii.viewDraw.RoundRect.RCRelativeLayout
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:layout_centerInParent="true"
@@ -134,7 +134,7 @@
                 android:textColor="#fff"
                 android:textSize="24sp"/>
 
-        </com.huawaii.viewDraw.views.RCRelativeLayout>
+        </com.huawaii.viewDraw.RoundRect.RCRelativeLayout>
     </RelativeLayout>
 
 </LinearLayout>

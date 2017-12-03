@@ -12,32 +12,28 @@ import android.widget.ImageView;
 
 public class ColorView extends ImageView {
 
-    private Paint myPaint = null;
-    private Bitmap bitmap = null;
-    private ColorMatrix myColorMatrix = null;
+    private Bitmap mBitmap = null;
+    private Paint mPaint = new Paint(); //新建画笔对象
+    private ColorMatrix myColorMatrix = new ColorMatrix();  //新建颜色矩阵对象
     private float[] colorArray = {1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0};
 
     public ColorView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.a2);
+        mBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.a2);
         invalidate();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //新建画笔对象
-        myPaint = new Paint();
         //描画（原始图片）
-        canvas.drawBitmap(bitmap, 0, 0, myPaint);
-        //新建颜色矩阵对象
-        myColorMatrix = new ColorMatrix();
+        //canvas.drawBitmap(mBitmap, 0, 0, mPaint);
         //设置颜色矩阵的值
         myColorMatrix.set(colorArray);
         //设置画笔颜色过滤器
-        myPaint.setColorFilter(new ColorMatrixColorFilter(myColorMatrix));
+        mPaint.setColorFilter(new ColorMatrixColorFilter(myColorMatrix));
         //描画（处理后的图片）
-        canvas.drawBitmap(bitmap, 0, 0, myPaint);
+        canvas.drawBitmap(mBitmap, 0, 0, mPaint);
     }
 
     //设置颜色数值
@@ -48,6 +44,6 @@ public class ColorView extends ImageView {
 
     //设置图片
     public void setBitmap(Bitmap bitmap) {
-        this.bitmap = bitmap;
+        this.mBitmap = bitmap;
     }
 }

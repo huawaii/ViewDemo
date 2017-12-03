@@ -1,4 +1,4 @@
-package com.huawaii.viewDraw.views;
+package com.huawaii.viewDraw.RoundRect;
 
 import android.content.Context;
 import android.content.res.TypedArray;

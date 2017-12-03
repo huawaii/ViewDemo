@@ -1,4 +1,4 @@
-package com.huawaii.viewDraw.views;
+package com.huawaii.viewDraw.Xfermode;
 
 import android.content.Context;
 import android.graphics.Bitmap;
