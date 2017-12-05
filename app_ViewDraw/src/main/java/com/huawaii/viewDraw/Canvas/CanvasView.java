@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
+import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
@@ -63,16 +64,27 @@ public class CanvasView extends View {
      * Paint 设置图形的公有信息
      */
     private void initPaintPrimary() {
+        mPaint.reset(); //重置 Paint 的所有属性为默认值。相当于重新 new 一个，不过性能当然高一些啦
+
+        /** 图形的轮廓参数设置*/
         mPaint.setColor(Color.BLACK);       //设置画笔颜色
         mPaint.setStyle(Paint.Style.STROKE);  //设置画笔模式为画线（FILL 填充）
         mPaint.setStrokeWidth(10f);         //设置画笔宽度为10px
+        // 单一效果：CornerPathEffect DiscretePathEffect DashPathEffect PathDashPathEffect
+        // 组合效果：SumPathEffect ComposePathEffect
+        //mPaint.setPathEffect(null);
+
+        /** 图形的图像色彩优化*/
         mPaint.setAntiAlias(true);          //设置画笔抗锯齿
+        //mPaint.setDither(true);             //设置抖动来优化色彩深度降低时的绘制效果；用于低分辨率图片，如自建Bitmap ARGB_4444 或者 RGB_565
+        //mPaint.setFilterBitmap(true);       //设置双线性过滤来优化 Bitmap 放大绘制的效果
     }
 
     /**
      * Shader   设置着色器 setShader()
      * PorterDuff.Mode  指定两个图像共同绘制时的颜色策略，一共17个，一类Alpha 合成、一类混合 (Blending)
-     * ColorFilter  设置颜色过滤 setColorFilter()
+     * ColorFilter  设置颜色过滤，对每个像素的颜色进行过滤 setColorFilter()
+     * MaskFilter   设置颜色过滤，对整个画面来进行过滤 setMaskFilter()
      */
     private void initPaintAdvanced() {
         /** 渐变着色器   LinearGradient RadialGradient SweepGradient */
@@ -86,9 +98,14 @@ public class CanvasView extends View {
         //mPaint.setShader(shader);
 
         /** 颜色过滤器   LightingColorFilter PorterDuffColorFilter ColorMatrixColorFilter */
-        ColorFilter colorFilter = new LightingColorFilter(0xff00ff, 0x000000);
+        //ColorFilter colorFilter = new LightingColorFilter(0xff00ff, 0x000000);
         //ColorFilter colorFilter = new PorterDuffColorFilter(0xFF2222, PorterDuff.Mode.XOR);
-        mPaint.setColorFilter(colorFilter);
+        //mPaint.setColorFilter(colorFilter);
+
+        /** 附加效果*/
+        //mPaint.setShadowLayer(10, 0, 0, Color.RED); //设置内容阴影，设置的在绘制层下方的附加效果
+        //BlurMaskFilter maskFilter = new BlurMaskFilter(50, BlurMaskFilter.Blur.NORMAL);
+        //mPaint.setMaskFilter(maskFilter); //设置内容过滤，设置的是在绘制层上方的附加效果
     }
 
     /**
