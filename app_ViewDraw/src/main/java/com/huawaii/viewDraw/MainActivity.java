@@ -14,8 +14,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //gotoRoundImageActivity(null);
-        //gotoXfermodeActivity(null);
-        gotoCanvasActivity(null);
+        gotoXfermodeActivity(null);
+        //gotoCanvasActivity(null);
     }
 
     public void gotoRoundImageActivity(View view) {

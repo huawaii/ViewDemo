@@ -5,17 +5,63 @@
 * @author huawaii on .
 */
 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FF118877"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF118877"/>
 
-    <com.huawaii.viewDraw.Xfermode.PorterDuffXfermodeView
-        android:id="@+id/xfermode_view"
+        <com.huawaii.viewDraw.Xfermode.PorterDuffXfermodeView
+            android:id="@+id/xfermode_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <com.huawaii.viewDraw.Xfermode.ColorfulFrameLayout
+        android:id="@+id/colorfulFrameLayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+        <com.huawaii.viewDraw.Xfermode.ColorfulTextView
+            android:id="@+id/colorfulTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:textColor="#66000000"
+            android:text="huawaii"/>
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:textColor="#66000000"
+            android:text="huawaii"/>
+    </com.huawaii.viewDraw.Xfermode.ColorfulFrameLayout>
+    <Button
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-</FrameLayout>
+        android:text="消失"
+        android:onClick="startAnimation"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示"
+        android:onClick="overAnimation"/>
+</LinearLayout>
