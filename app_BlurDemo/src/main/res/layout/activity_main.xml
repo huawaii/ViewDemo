@@ -6,14 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.huawaii.blurdemo.MainActivity">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/huawaii">
-        <com.huawaii.blurdemo.GLBlurView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"/>
-    </FrameLayout>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/huawaii"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/huawaii"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/huawaii"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/huawaii"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.huawaii.blurdemo.GLBlurView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"/>
 
 </FrameLayout>
