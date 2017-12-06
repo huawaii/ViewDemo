@@ -1,3 +1,3 @@
-include ':app_ViewTree', ':app_ViewDraw'
+include ':app_ViewTree', ':app_ViewDraw', ':app_BlurDemo'
 include ':app_CustomView'
 include ':app_ColorMatrix'
