@@ -4,8 +4,8 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.mycolor"
-        minSdkVersion 15
+        applicationId "com.colorMatrix"
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
