@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 import static com.huawaii.viewTree.MainActivity.DEBUG_EVENT;
 import static com.huawaii.viewTree.MainActivity.DEBUG_LAYOUT;
 
-public class MyViewGroupA extends RelativeLayout implements View.OnClickListener{
+public class MyViewGroupA extends RelativeLayout implements View.OnClickListener, View.OnTouchListener {
 
     public MyViewGroupA(Context context) {
         super(context);
@@ -31,13 +31,21 @@ public class MyViewGroupA extends RelativeLayout implements View.OnClickListener
 
     private void init() {
         setOnClickListener(this);
-        /*setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.d("click", "ViewGroupA onTouch" + event.getAction());
-                return false;
-            }
-        });*/
+        setOnTouchListener(this);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        Log.d(DEBUG_EVENT, "ViewGroupA onTouch" + event.getAction());
+        return false;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Log.d(DEBUG_EVENT, "ViewGroupA onClick->79: -------");
+        Log.d(DEBUG_LAYOUT, "ViewGroupA onClick->79: -------");
+        //requestLayout();
+        //invalidate();
     }
 
     @Override
@@ -56,14 +64,6 @@ public class MyViewGroupA extends RelativeLayout implements View.OnClickListener
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(DEBUG_EVENT, "ViewGroupA onTouchEvent: " + event.getAction());
         return super.onTouchEvent(event);
-    }
-
-    @Override
-    public void onClick(View v) {
-        Log.d(DEBUG_EVENT, "ViewGroupA onClick->79: -------");
-        Log.d(DEBUG_LAYOUT, "ViewGroupA onClick->79: -------");
-        //requestLayout();
-        invalidate();
     }
 
     @Override
